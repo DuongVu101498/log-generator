@@ -11,7 +11,9 @@ spec:
     volumeMounts:
     - mountPath: /var/log
       name: log-volume
-   volumes:
-   - name: log-volume
-     hostPath: /var/log/k8s/
-     type: DirectoryOrCreate
+  volumes:
+  - name: log-volume
+    hostPath:
+      # Ensure the file directory is created.
+      path: /var/log/k8s/
+      type: DirectoryOrCreate
