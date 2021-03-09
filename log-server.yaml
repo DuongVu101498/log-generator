@@ -11,6 +11,6 @@ spec:
     volumeMounts:
     - mountPath: /var/log
       name: log-volume
-    volumes:
-    - name: log-volume
-      hostPath: /var/log/k8s/
+  volumes:
+   - name: log-volume
+     hostPath: /var/log/k8s/
