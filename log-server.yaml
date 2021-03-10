@@ -7,7 +7,7 @@ spec:
   - name: count
     image: busybox
     args: [/bin/sh, -c,
-            'mkdir /var/log/; touch /var/log/example1.log; i=0; while true; do echo "$i: $(date)" >> /var/log/k8s/example1.log; i=$((i+1)); sleep 1; done ']
+            'mkdir /var/log/; touch /var/log/example1.log; i=0; while true; do echo "$i: $(date)" >> /var/log/example1.log; i=$((i+1)); sleep 1; done ']
     volumeMounts:
     - mountPath: /var/log
       name: log-volume
